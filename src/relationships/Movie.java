@@ -6,12 +6,14 @@ public class Movie {
     private String category;
     private Director director;
     private int numAward;
+    private Actor[] actors;
 
     // Movie constructor
-    public Movie (String title, String category, Director director) {
+    public Movie (String title, String category, Director director, Actor[] actors) {
         this.title = title;
         this.category = category;
         this.director = director;
+        this.actors = actors;
     }
 
     // getters
@@ -29,6 +31,10 @@ public class Movie {
 
     public int getNumAward() {
         return numAward;
+    }
+
+    public Actor[] getActors() {
+        return actors;
     }
 
     // setters
