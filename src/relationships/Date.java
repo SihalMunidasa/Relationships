@@ -53,6 +53,6 @@ public class Date {
     // overriding toString() method in Object class to print a custom message
     @Override
     public String toString() {
-        return "relationships.Date [ day = " + day + ", month = " + month + ", year = " + year + " ]";
+        return "Date [ day = " + day + ", month = " + month + ", year = " + year + " ]";
     }
 }
