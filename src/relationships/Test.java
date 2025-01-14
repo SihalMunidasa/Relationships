@@ -13,8 +13,14 @@ public class Test {
         director.setNoOfMovies(23);
         System.out.println(director); // Director's	toString()
 
+        // Creating actors list of a movie
+        Actor[] listActor = new Actor[10]; // it will create an array of 10 actors
+        listActor[0] = new Actor(); // it will create an object Actor and save in position 0
+        listActor[0].setName("Jackie");
+        listActor[0].setSurname("Chan");
+
         // Test Movie's	constructor	and	toString()
-        Movie movie	= new Movie("Avatar", "Fantasy", director);
+        Movie movie	= new Movie("Avatar", "Fantasy", director, listActor);
         System.out.println(movie); // Movie's toString()
         // Here when we print out the movie, the number of awards is mentioned as 0
         // but we never initialised the numAwards variable
@@ -30,5 +36,10 @@ public class Test {
         System.out.println("name of	director is: " + movie.getDirector().getName());
         System.out.println("surname	of director is: " + movie.getDirector().getSurname());
         System.out.println("number of awards is: " + movie.getNumAward());
+
+        // Printing all the actors in the movie
+        for (Actor actor: movie.getActors()) {
+            System.out.println(actor);
+        }
     }
 }
